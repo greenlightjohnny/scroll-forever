@@ -8,7 +8,7 @@ function App() {
       <section className="hero">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">Hello</h1>
+            <h1 className="title">Unsplash API Infinite Photo Scroll</h1>
           </div>
         </div>
       </section>

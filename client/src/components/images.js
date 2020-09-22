@@ -26,20 +26,19 @@ export class images extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
-      <div className="images">
-        <InfiniteScroll
-          dataLength={this.state.images.length}
-          next={this.fetchImages}
-          hasMore={true}
-          loader={<h2>Loading....</h2>}
-        >
+      <InfiniteScroll
+        dataLength={this.state.images.length}
+        next={this.fetchImages}
+        hasMore={true}
+        loader={<h2>Loading....</h2>}
+      >
+        <div className="images">
           {this.state.images.map((image) => {
             return <Image key={images.id} image={image} />;
           })}
-        </InfiniteScroll>
-      </div>
+        </div>
+      </InfiniteScroll>
     );
   }
 }
