@@ -13,7 +13,7 @@ const express = require("express");
 const unsplash = new Unsplash({
   accessKey: process.env.APPLICATION_ID,
   secret: process.env.SECRET,
-  callbackUrl: config.get("CALLBACK_URL"),
+  callbackUrl: process.env.CALLBACK_URL,
 });
 const mme = process.env.SECRET;
 console.log("######", mme);
