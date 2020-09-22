@@ -1,6 +1,8 @@
 //Needed for unsplash
 global.fetch = require("node-fetch");
 
+require("dotenv").config();
+
 ///Config
 const config = require("universal-config");
 ////
@@ -9,11 +11,11 @@ const toJson = require("unsplash-js").toJson;
 const express = require("express");
 
 const unsplash = new Unsplash({
-  accessKey: config.get("APPLICATION_ID"),
-  secret: config.get("SECRET"),
+  accessKey: process.env.APPLICATION_ID,
+  secret: process.env.SECRET,
   callbackUrl: config.get("CALLBACK_URL"),
 });
-const mme = config.get("SECRET");
+const mme = process.env.SECRET;
 console.log("######", mme);
 
 const app = express();
