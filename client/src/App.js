@@ -1,5 +1,5 @@
 import React from "react";
-
+import Images from "./components/images";
 import "./App.css";
 
 function App() {
@@ -8,12 +8,12 @@ function App() {
       <section className="hero">
         <div className="hero-body">
           <div className="container">
-            <hi className="title">Hello</hi>
+            <h1 className="title">Hello</h1>
           </div>
         </div>
       </section>
       <section className="container">
-        <div className="images">ttt</div>
+        <Images />
       </section>
     </div>
   );
